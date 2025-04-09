@@ -1,0 +1,11 @@
+fn fib(n: u32) -> u32 {
+    if n < 2 {
+        return todo!("Implement this");
+    } else {
+        return todo!("Implement this");
+    }
+}
+
+fn main() {
+    println!("fib(10) = {}", fib(10));
+}

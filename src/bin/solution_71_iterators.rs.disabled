@@ -1,0 +1,14 @@
+/// sum of 0..20, but using iterators
+fn sum() -> u32 {
+    (0..20).filter(|&i| i % 3 != 0).sum()
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_sum() {
+        assert_eq!(sum(), 127);
+    }
+}

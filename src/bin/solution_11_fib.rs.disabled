@@ -1,0 +1,29 @@
+/// Fibonacci sequence
+///
+/// fib(0) = 0
+/// fib(1) = 1
+/// fib(n) = fib(n-1) + fib(n-2)
+fn fib(n: u32) -> u32 {
+    if n < 2 {
+        return n;
+    } else {
+        return fib(n - 1) + fib(n - 2);
+    }
+}
+
+fn main() {
+    println!("fib(10) = {}", fib(10));
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_fib() {
+        assert_eq!(fib(0), 0);
+        assert_eq!(fib(1), 1);
+        assert_eq!(fib(2), 1);
+        assert_eq!(fib(10), 55);
+    }
+}

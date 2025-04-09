@@ -1,0 +1,16 @@
+fn main() {
+    let str1 = String::from("short");
+    let str2 = String::from("longer");
+    let str3 = String::from("longest string");
+
+    let longest_string = longest(&str1, &str2, &str3);
+
+    // TODO experiment with the strings, what can you do?
+
+    println!("The longest string is: {}", longest_string);
+}
+
+// TODO add lifetime annotations
+fn longest(s1: &str, s2: &str, s3: &str) -> &str {
+    todo!()
+}
